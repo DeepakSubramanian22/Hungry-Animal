@@ -3,6 +3,9 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public float horizontalInput;
+    public float speed;
+
+    public float xRange = 10.00f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,6 +15,16 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x < -xRange)
+        {
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.x > xRange)
+        {
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
         horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * (speed * horizontalInput * Time.deltaTime));
     }
 }
