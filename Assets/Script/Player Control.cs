@@ -6,6 +6,8 @@ public class PlayerControl : MonoBehaviour
     public float speed;
 
     public float xRange = 10.00f;
+
+    public GameObject ProjectilePrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,5 +28,10 @@ public class PlayerControl : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * (speed * horizontalInput * Time.deltaTime));
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(ProjectilePrefab, transform.position, transform.rotation);
+        }
     }
 }
