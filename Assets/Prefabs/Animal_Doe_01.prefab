@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 7309848305888017664}
   - component: {fileID: 1457525832173740668}
   - component: {fileID: 5679981666287413212}
+  - component: {fileID: 8581525021611506674}
   m_Layer: 0
   m_Name: Animal_Doe_01
   m_TagString: Untagged
@@ -262,6 +263,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootForward
   speed: 15
+--- !u!114 &8581525021611506674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558928912350997634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e991ff4c830c2cd4cb34de8bf6b9b6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOutofBounds
 --- !u!1 &1863553612071423094
 GameObject:
   m_ObjectHideFlags: 0
