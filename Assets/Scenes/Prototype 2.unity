@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControl
   horizontalInput: 0
-  speed: 40
+  speed: 25
   xRange: 15
   ProjectilePrefab: {fileID: 5955119604740313755, guid: 6c7d8727bdc7b6548837fa0187988b84, type: 3}
 --- !u!1 &1590138454
