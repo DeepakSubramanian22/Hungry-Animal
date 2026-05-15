@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DestroyOutofBounds : MonoBehaviour
 {
-    private float topBound = 30;
+    private float topBound = 40;
     private float lowerBound = -10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,7 +20,9 @@ public class DestroyOutofBounds : MonoBehaviour
         }
         else if (transform.position.z < lowerBound)
         {
+            Debug.Log("Game Over");
             Destroy(gameObject);
+            SceneManager.LoadScene(1);
         }
     }
 }
