@@ -19,6 +19,7 @@ public class CollisionDestroy : MonoBehaviour
     {
         if (other.gameObject.tag == "Pizza")
         {
+            FindAnyObjectByType<ScoreCard>().AddScore();
             Destroy(gameObject);
         }
     }

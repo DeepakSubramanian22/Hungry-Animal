@@ -4,6 +4,7 @@ public class PlayerControl : MonoBehaviour
 {
     public float horizontalInput;
     public float speed;
+    public ScoreCard[] AnimalPrefabs;
 
     public float xRange = 10.00f;
 
@@ -32,6 +33,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(ProjectilePrefab, transform.position, transform.rotation);
+            
         }
     }
 }
